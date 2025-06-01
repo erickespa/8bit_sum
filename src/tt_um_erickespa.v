@@ -22,8 +22,8 @@ module tt_um_erickespa (
 
   // Optionally: use the 9th bit as overflow indication on a GPIO output
   assign uio_out = {7'b0, sum[8]};  // overflow bit on uio_out[0]
-  assign oio_out[7:1] = 0
-  assign uio_oe  = 0
+  assign oio_out[7:1] = 0; 
+  assign uio_oe  = 0;
 
   // List all unused inputs to prevent warnings
   wire _unused = &{ena, clk, rst_n, 1'b0};
